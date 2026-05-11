@@ -1,0 +1,101 @@
+aid: aws-marketplace
+name: AWS Marketplace
+description: >-
+  AWS Marketplace is a curated digital catalog from Amazon Web Services that
+  lets customers find, buy, deploy, and manage third-party software, SaaS,
+  containers, machine images (AMIs), data products, and professional services
+  that run on AWS. The AWS Marketplace Catalog API enables approved sellers
+  to programmatically manage their products, change sets, and entities, while
+  buyers can integrate procurement workflows with AWS billing.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - AWS
+  - Cloud Marketplace
+  - Procurement
+  - SaaS
+  - Software Distribution
+  - Catalog
+url: https://raw.githubusercontent.com/api-evangelist/aws-marketplace/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: aws-marketplace:catalog-api
+    name: AWS Marketplace Catalog API
+    description: >-
+      REST API for AWS Marketplace sellers to programmatically view and update
+      their product entities and change sets in the marketplace catalog.
+    humanURL: https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html
+    baseURL: https://catalog.marketplace.us-east-1.amazonaws.com
+    tags:
+      - Catalog
+      - Entities
+      - Change Sets
+      - Seller Products
+    properties:
+      - type: Documentation
+        url: https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html
+      - type: API Reference
+        url: https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_Operations.html
+      - type: CLI
+        url: https://awscli.amazonaws.com/v2/documentation/api/latest/reference/marketplace-catalog/index.html
+  - aid: aws-marketplace:metering-service
+    name: AWS Marketplace Metering Service API
+    description: >-
+      API used by AWS Marketplace sellers of SaaS and container products to
+      report customer usage and entitlements for billing.
+    humanURL: https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/Welcome.html
+    baseURL: https://metering.marketplace.us-east-1.amazonaws.com
+    tags:
+      - Metering
+      - Billing
+      - Usage
+    properties:
+      - type: Documentation
+        url: https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/Welcome.html
+  - aid: aws-marketplace:entitlement-service
+    name: AWS Marketplace Entitlement Service API
+    description: >-
+      API for AWS Marketplace sellers to determine the entitlement that a
+      customer has to a paid AWS Marketplace product.
+    humanURL: https://docs.aws.amazon.com/marketplaceentitlement/latest/APIReference/Welcome.html
+    baseURL: https://entitlement.marketplace.us-east-1.amazonaws.com
+    tags:
+      - Entitlement
+      - SaaS
+    properties:
+      - type: Documentation
+        url: https://docs.aws.amazon.com/marketplaceentitlement/latest/APIReference/Welcome.html
+  - aid: aws-marketplace:commerce-analytics-service
+    name: AWS Marketplace Commerce Analytics Service API
+    description: >-
+      API for AWS Marketplace sellers to request and retrieve reports about
+      sales, customer subscriptions, and disbursements.
+    humanURL: https://docs.aws.amazon.com/marketplace/latest/APIReference/commerce-analytics-service.html
+    baseURL: https://marketplacecommerceanalytics.us-east-1.amazonaws.com
+    tags:
+      - Analytics
+      - Reports
+      - Sales
+    properties:
+      - type: Documentation
+        url: https://docs.aws.amazon.com/marketplace/latest/APIReference/commerce-analytics-service.html
+common:
+  - type: Website
+    url: https://aws.amazon.com/marketplace/
+  - type: Documentation
+    url: https://docs.aws.amazon.com/marketplace/
+  - type: API Reference
+    url: https://docs.aws.amazon.com/marketplace/latest/APIReference/welcome.html
+  - type: Buyer Guide
+    url: https://docs.aws.amazon.com/marketplace/latest/buyerguide/what-is-marketplace.html
+  - type: Seller Guide
+    url: https://docs.aws.amazon.com/marketplace/latest/userguide/what-is-marketplace.html
+  - type: GitHub Samples
+    url: https://github.com/aws-samples/aws-marketplace-api-samples
+  - type: Sign Up
+    url: https://aws.amazon.com/marketplace/management/signin
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
