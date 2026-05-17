@@ -36,7 +36,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html
-      - type: API Reference
+      - type: APIReference
         url: https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_Operations.html
       - type: CLI
         url: https://awscli.amazonaws.com/v2/documentation/api/latest/reference/marketplace-catalog/index.html
@@ -86,7 +86,7 @@ common:
     url: https://aws.amazon.com/marketplace/
   - type: Documentation
     url: https://docs.aws.amazon.com/marketplace/
-  - type: API Reference
+  - type: APIReference
     url: https://docs.aws.amazon.com/marketplace/latest/APIReference/welcome.html
   - type: Buyer Guide
     url: https://docs.aws.amazon.com/marketplace/latest/buyerguide/what-is-marketplace.html
@@ -94,7 +94,7 @@ common:
     url: https://docs.aws.amazon.com/marketplace/latest/userguide/what-is-marketplace.html
   - type: GitHub Samples
     url: https://github.com/aws-samples/aws-marketplace-api-samples
-  - type: Sign Up
+  - type: SignUp
     url: https://aws.amazon.com/marketplace/management/signin
 maintainers:
   - FN: Kin Lane
