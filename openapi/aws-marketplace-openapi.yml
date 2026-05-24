@@ -1,0 +1,172 @@
+openapi: 3.1.0
+info:
+  title: AWS Marketplace Catalog API
+  version: '2018-09-17'
+  description: |
+    The AWS Marketplace Catalog API lets approved sellers programmatically
+    view and update their AWS Marketplace product entities and change sets.
+    All operations are REST POST requests to named paths, with the JSON
+    request body containing input parameters. Requests are signed with AWS
+    Signature Version 4 (SigV4).
+
+    See https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html
+servers:
+  - url: https://catalog.marketplace.{region}.amazonaws.com
+    description: AWS Marketplace Catalog regional endpoint
+    variables:
+      region:
+        default: us-east-1
+tags:
+  - name: Entities
+  - name: Change Sets
+  - name: Resource Policies
+  - name: Tags
+security:
+  - SigV4: []
+paths:
+  /ListEntities:
+    post:
+      tags: [Entities]
+      operationId: ListEntities
+      summary: List entities in the catalog
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /DescribeEntity:
+    get:
+      tags: [Entities]
+      operationId: DescribeEntity
+      summary: Describe an entity
+      parameters:
+        - name: catalog
+          in: query
+          required: true
+          schema: { type: string }
+        - name: entityId
+          in: query
+          required: true
+          schema: { type: string }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /BatchDescribeEntities:
+    post:
+      tags: [Entities]
+      operationId: BatchDescribeEntities
+      summary: Describe multiple entities in a single request
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /ListChangeSets:
+    post:
+      tags: [Change Sets]
+      operationId: ListChangeSets
+      summary: List change sets
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /DescribeChangeSet:
+    get:
+      tags: [Change Sets]
+      operationId: DescribeChangeSet
+      summary: Describe a change set
+      parameters:
+        - name: catalog
+          in: query
+          required: true
+          schema: { type: string }
+        - name: changeSetId
+          in: query
+          required: true
+          schema: { type: string }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /StartChangeSet:
+    post:
+      tags: [Change Sets]
+      operationId: StartChangeSet
+      summary: Start a change set
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /CancelChangeSet:
+    patch:
+      tags: [Change Sets]
+      operationId: CancelChangeSet
+      summary: Cancel a change set
+      parameters:
+        - name: catalog
+          in: query
+          required: true
+          schema: { type: string }
+        - name: changeSetId
+          in: query
+          required: true
+          schema: { type: string }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /GetResourcePolicy:
+    get:
+      tags: [Resource Policies]
+      operationId: GetResourcePolicy
+      summary: Get a resource policy
+      parameters:
+        - name: resourceArn
+          in: query
+          required: true
+          schema: { type: string }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /PutResourcePolicy:
+    post:
+      tags: [Resource Policies]
+      operationId: PutResourcePolicy
+      summary: Attach a resource policy
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /DeleteResourcePolicy:
+    delete:
+      tags: [Resource Policies]
+      operationId: DeleteResourcePolicy
+      summary: Delete a resource policy
+      parameters:
+        - name: resourceArn
+          in: query
+          required: true
+          schema: { type: string }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /TagResource:
+    post:
+      tags: [Tags]
+      operationId: TagResource
+      summary: Tag a resource
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /UntagResource:
+    post:
+      tags: [Tags]
+      operationId: UntagResource
+      summary: Untag a resource
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /ListTagsForResource:
+    post:
+      tags: [Tags]
+      operationId: ListTagsForResource
+      summary: List tags for a resource
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+components:
+  requestBodies:
+    JsonBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  responses:
+    OK:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  securitySchemes:
+    SigV4:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: AWS Signature Version 4 signed Authorization header
