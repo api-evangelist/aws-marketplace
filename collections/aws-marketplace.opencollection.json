@@ -1,0 +1,275 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS Marketplace Catalog API",
+    "version": "2018-09-17"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Entities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List entities in the catalog",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://catalog.marketplace.{region}.amazonaws.com/ListEntities",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List entities in the catalog"
+        },
+        {
+          "info": {
+            "name": "Describe an entity",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://catalog.marketplace.{region}.amazonaws.com/DescribeEntity",
+            "params": [
+              {
+                "name": "catalog",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "entityId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Describe an entity"
+        },
+        {
+          "info": {
+            "name": "Describe multiple entities in a single request",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://catalog.marketplace.{region}.amazonaws.com/BatchDescribeEntities",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Describe multiple entities in a single request"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Change Sets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List change sets",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://catalog.marketplace.{region}.amazonaws.com/ListChangeSets",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List change sets"
+        },
+        {
+          "info": {
+            "name": "Describe a change set",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://catalog.marketplace.{region}.amazonaws.com/DescribeChangeSet",
+            "params": [
+              {
+                "name": "catalog",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "changeSetId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Describe a change set"
+        },
+        {
+          "info": {
+            "name": "Start a change set",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://catalog.marketplace.{region}.amazonaws.com/StartChangeSet",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Start a change set"
+        },
+        {
+          "info": {
+            "name": "Cancel a change set",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://catalog.marketplace.{region}.amazonaws.com/CancelChangeSet",
+            "params": [
+              {
+                "name": "catalog",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "changeSetId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Cancel a change set"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Resource Policies",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a resource policy",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://catalog.marketplace.{region}.amazonaws.com/GetResourcePolicy",
+            "params": [
+              {
+                "name": "resourceArn",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get a resource policy"
+        },
+        {
+          "info": {
+            "name": "Attach a resource policy",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://catalog.marketplace.{region}.amazonaws.com/PutResourcePolicy",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Attach a resource policy"
+        },
+        {
+          "info": {
+            "name": "Delete a resource policy",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://catalog.marketplace.{region}.amazonaws.com/DeleteResourcePolicy",
+            "params": [
+              {
+                "name": "resourceArn",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Delete a resource policy"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Tags",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Tag a resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://catalog.marketplace.{region}.amazonaws.com/TagResource",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Tag a resource"
+        },
+        {
+          "info": {
+            "name": "Untag a resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://catalog.marketplace.{region}.amazonaws.com/UntagResource",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Untag a resource"
+        },
+        {
+          "info": {
+            "name": "List tags for a resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://catalog.marketplace.{region}.amazonaws.com/ListTagsForResource",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List tags for a resource"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
