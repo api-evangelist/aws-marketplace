@@ -94,7 +94,7 @@ common:
     url: https://docs.aws.amazon.com/marketplace/latest/userguide/what-is-marketplace.html
   - type: GitHub Samples
     url: https://github.com/aws-samples/aws-marketplace-api-samples
-  - type: SignUp
+  - type: Signup
     url: https://aws.amazon.com/marketplace/management/signin
 maintainers:
   - FN: Kin Lane
