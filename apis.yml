@@ -82,6 +82,14 @@ apis:
       - type: Documentation
         url: https://docs.aws.amazon.com/marketplace/latest/APIReference/commerce-analytics-service.html
 common:
+  - type: TrustCenter
+    url: security/aws-marketplace-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/aws-marketplace-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/aws-marketplace-domain-security.yml
+  - type: Authentication
+    url: authentication/aws-marketplace-authentication.yml
   - type: Website
     url: https://aws.amazon.com/marketplace/
   - type: Documentation
@@ -96,6 +104,8 @@ common:
     url: https://github.com/aws-samples/aws-marketplace-api-samples
   - type: Signup
     url: https://aws.amazon.com/marketplace/management/signin
+  - url: https://aws.amazon.com/blogs/awsmarketplace/feed/
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
