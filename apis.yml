@@ -82,6 +82,8 @@ apis:
       - type: Documentation
         url: https://docs.aws.amazon.com/marketplace/latest/APIReference/commerce-analytics-service.html
 common:
+  - type: AgenticAccess
+    url: agentic-access/aws-marketplace-agentic-access.yml
   - type: TrustCenter
     url: security/aws-marketplace-trust-center.yml
   - type: VulnerabilityDisclosure
