@@ -1,0 +1,20 @@
+{
+  "provider": "aws-marketplace",
+  "sources": [
+    "aws-marketplace-change-sets-api-openapi.yml",
+    "aws-marketplace-entities-api-openapi.yml",
+    "aws-marketplace-resource-policies-api-openapi.yml",
+    "aws-marketplace-tags-api-openapi.yml"
+  ],
+  "outputs": [
+    "aws-marketplace-change-sets-api-openapi.yml",
+    "aws-marketplace-entities-api-openapi.yml",
+    "aws-marketplace-resource-policies-api-openapi.yml",
+    "aws-marketplace-tags-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
