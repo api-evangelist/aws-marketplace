@@ -1,0 +1,79 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS Marketplace Catalog Change Sets Entities API",
+    "version": "2018-09-17"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Entities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List entities in the catalog",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://catalog.marketplace.{region}.amazonaws.com/ListEntities",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List entities in the catalog"
+        },
+        {
+          "info": {
+            "name": "Describe an entity",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://catalog.marketplace.{region}.amazonaws.com/DescribeEntity",
+            "params": [
+              {
+                "name": "catalog",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "entityId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Describe an entity"
+        },
+        {
+          "info": {
+            "name": "Describe multiple entities in a single request",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://catalog.marketplace.{region}.amazonaws.com/BatchDescribeEntities",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Describe multiple entities in a single request"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

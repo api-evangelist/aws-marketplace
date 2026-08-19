@@ -1,0 +1,102 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS Marketplace Catalog Change Sets API",
+    "version": "2018-09-17"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Change Sets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List change sets",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://catalog.marketplace.{region}.amazonaws.com/ListChangeSets",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List change sets"
+        },
+        {
+          "info": {
+            "name": "Describe a change set",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://catalog.marketplace.{region}.amazonaws.com/DescribeChangeSet",
+            "params": [
+              {
+                "name": "catalog",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "changeSetId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Describe a change set"
+        },
+        {
+          "info": {
+            "name": "Start a change set",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://catalog.marketplace.{region}.amazonaws.com/StartChangeSet",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Start a change set"
+        },
+        {
+          "info": {
+            "name": "Cancel a change set",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://catalog.marketplace.{region}.amazonaws.com/CancelChangeSet",
+            "params": [
+              {
+                "name": "catalog",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "changeSetId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Cancel a change set"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
