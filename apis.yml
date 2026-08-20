@@ -25,6 +25,13 @@ tags:
   - AWS
   - Cloud Marketplace
   - Procurement
+  - Software-as-a-Service
+  - Software Distribution
+  - Catalog
+tags_raw:
+  - AWS
+  - Cloud Marketplace
+  - Procurement
   - SaaS
   - Software Distribution
   - Catalog
@@ -41,6 +48,11 @@ apis:
   humanURL: https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html
   baseURL: https://catalog.marketplace.us-east-1.amazonaws.com
   tags:
+  - Catalog
+  - Entities
+  - Changesets
+  - Seller Products
+  tags_raw:
   - Catalog
   - Entities
   - Change Sets
@@ -76,6 +88,9 @@ apis:
   baseURL: https://entitlement.marketplace.us-east-1.amazonaws.com
   tags:
   - Entitlement
+  - Software-as-a-Service
+  tags_raw:
+  - Entitlement
   - SaaS
   properties:
   - type: Documentation
@@ -102,6 +117,8 @@ apis:
   humanURL: https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html
   baseURL: https://catalog.marketplace.us-east-1.amazonaws.com
   tags:
+  - Changesets
+  tags_raw:
   - Change Sets
   properties:
   - type: OpenAPI
