@@ -1,0 +1,24 @@
+slug: aws-marketplace
+provider: AWS Marketplace
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Transportation & Logistics
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Resource Policies
+  spec_file: aws-marketplace-resource-policies-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.78
+  evidence: '"Get a resource policy", "Attach a resource policy", "Delete a resource policy"'
+  reason: IAM-style resource policies controlling who may act on marketplace catalog resources are access-control
+    administration, mapping to Identity & Access Management rather than any marketplace business capability.

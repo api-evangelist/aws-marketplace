@@ -166,6 +166,9 @@ apis:
   - type: OpenAPI
     url: openapi/aws-marketplace-tags-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/aws-marketplace-capability-edges.yml
+    name: AWS Marketplace Business Capability Map
   - type: AgenticAccess
     url: agentic-access/aws-marketplace-agentic-access.yml
   - type: TrustCenter
