@@ -62,7 +62,7 @@ apis:
   tags:
   - Catalog
   - Entities
-  - Changesets
+  - Change Sets
   - Seller Products
   tags_raw:
   - Catalog
@@ -129,7 +129,7 @@ apis:
   humanURL: https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html
   baseURL: https://catalog.marketplace.us-east-1.amazonaws.com
   tags:
-  - Changesets
+  - Change Sets
   tags_raw:
   - Change Sets
   properties:
