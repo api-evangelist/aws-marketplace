@@ -124,18 +124,6 @@ apis:
   - type: Documentation
     url: >-
       https://docs.aws.amazon.com/marketplace/latest/APIReference/commerce-analytics-service.html
-- aid: aws-marketplace:aws-marketplace-change-sets-api
-  name: AWS Marketplace Change Sets API
-  description: The Change Sets API from AWS Marketplace — 4 operation(s) for change sets.
-  humanURL: https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html
-  baseURL: https://catalog.marketplace.us-east-1.amazonaws.com
-  tags:
-  - Changesets
-  tags_raw:
-  - Change Sets
-  properties:
-  - type: OpenAPI
-    url: openapi/aws-marketplace-change-sets-api-openapi.yml
 - aid: aws-marketplace:aws-marketplace-entities-api
   name: AWS Marketplace Entities API
   description: The Entities API from AWS Marketplace — 3 operation(s) for entities.
@@ -166,6 +154,16 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/aws-marketplace-tags-api-openapi.yml
+- aid: aws-marketplace:aws-marketplace-changesets-api
+  name: AWS Marketplace Changesets API
+  description: The Changesets API from AWS Marketplace — 4 operation(s) for changesets.
+  humanURL: https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html
+  baseURL: https://catalog.marketplace.us-east-1.amazonaws.com
+  tags:
+  - Changesets
+  properties:
+  - type: OpenAPI
+    url: openapi/aws-marketplace-changesets-api-openapi.yml
 common:
   - type: CapabilityMap
     url: capabilities/aws-marketplace-capability-edges.yml
