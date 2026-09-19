@@ -100,7 +100,7 @@ apis:
   humanURL: https://docs.aws.amazon.com/marketplaceentitlement/latest/APIReference/Welcome.html
   baseURL: https://entitlement.marketplace.us-east-1.amazonaws.com
   tags:
-  - Entitlement
+  - Entitlements
   - Software-as-a-Service
   tags_raw:
   - Entitlement
