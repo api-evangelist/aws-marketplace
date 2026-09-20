@@ -1,0 +1,69 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-09-20'
+method: searched
+source: https://aws.amazon.com/marketplace/pp/prodview-vtvxyzbzs3huy?ref_=showroomEPO
+sources:
+- https://aws.amazon.com/marketplace/pp/prodview-vtvxyzbzs3huy?ref_=showroomEPO
+provenance:
+  tool: planning/api-economics/harvest_pricing.py
+  run: 20260920T124425
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: tiered-subscription
+published: true
+note: AWS Marketplace SaaS listing for Cast AI with 1-month contract dimensions plus two usage-based additional
+  dimensions; private offers/custom pricing also available.
+plan_count: 8
+currency: USD
+plans:
+- name: Free
+  price_text: $0.00
+  price: 0
+  currency: USD
+  period: month
+  included_quota: Get unlimited Kubernetes monitoring and cost reduction insights.
+- name: Growth
+  price_text: $1,000.00
+  price: 1000
+  currency: USD
+  period: month
+  included_quota: Up to 4 managed clusters. Up to 500 CPU (charged based on usage)
+- name: GrowthPro
+  price_text: $1,000.00
+  price: 1000
+  currency: USD
+  period: month
+  included_quota: Unlimited managed clusters. Up to 2000 CPU (charged based on usage)
+- name: Enterprise
+  price_text: $5,000.00
+  price: 5000
+  currency: USD
+  period: month
+  included_quota: Unlimited managed clusters. Unlimited CPU (charged based on usage)
+- name: Growth 700 CPUs
+  price_text: $1,000.00
+  price: 1000
+  currency: USD
+  period: month
+  included_quota: Up to 5 managed clusters. Up to 700 CPU (charged based on usage)
+- name: Cost Monitoring
+  price_text: $200.00
+  price: 200
+  currency: USD
+  period: month
+  included_quota: Analyze your Kubernetes spending with detailed breakdowns across workloads, namespaces,
+    and allocation groups.
+- name: Additional hourly charge per managed CPU as defined at cast.ai/pricing
+  price_text: $0.00694444
+  price: 0.00694444
+  currency: USD
+  period: per-use
+  unit: per managed CPU hour
+  overage: Additional usage cost not included in contract terms
+- name: Consumption Fee
+  price_text: $0.01
+  price: 0.01
+  currency: USD
+  period: per-use
+  unit: unit
+  overage: Usage-based charges scaled according to platform consumption beyond base allocations.
