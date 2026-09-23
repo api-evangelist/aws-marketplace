@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: AWS Marketplace Catalog Change Sets Tags API
+  title: AWS Marketplace Catalog Tags API
   version: '2018-09-17'
   description: 'The AWS Marketplace Catalog API lets approved sellers programmatically
 
@@ -13,9 +13,7 @@ info:
     Signature Version 4 (SigV4).
 
 
-    See https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html
-
-    '
+    See https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html'
 servers:
 - url: https://catalog.marketplace.{region}.amazonaws.com
   description: AWS Marketplace Catalog regional endpoint

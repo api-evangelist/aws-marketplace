@@ -13,9 +13,7 @@ info:
     Signature Version 4 (SigV4).
 
 
-    See https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html
-
-    '
+    See https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html'
 servers:
 - url: https://catalog.marketplace.{region}.amazonaws.com
   description: AWS Marketplace Catalog regional endpoint
@@ -25,12 +23,12 @@ servers:
 security:
 - SigV4: []
 tags:
-- name: Change Sets
+- name: Changesets
 paths:
   /ListChangeSets:
     post:
       tags:
-      - Change Sets
+      - Changesets
       operationId: ListChangeSets
       summary: List change sets
       requestBody:
@@ -41,7 +39,7 @@ paths:
   /DescribeChangeSet:
     get:
       tags:
-      - Change Sets
+      - Changesets
       operationId: DescribeChangeSet
       summary: Describe a change set
       parameters:
@@ -61,7 +59,7 @@ paths:
   /StartChangeSet:
     post:
       tags:
-      - Change Sets
+      - Changesets
       operationId: StartChangeSet
       summary: Start a change set
       requestBody:
@@ -72,7 +70,7 @@ paths:
   /CancelChangeSet:
     patch:
       tags:
-      - Change Sets
+      - Changesets
       operationId: CancelChangeSet
       summary: Cancel a change set
       parameters:
