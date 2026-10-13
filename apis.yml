@@ -1,205 +1,48 @@
 aid: aws-marketplace
+
 name: AWS Marketplace
+
 description: >-
-  AWS Marketplace is a curated digital catalog from Amazon Web Services that
-  lets customers find, buy, deploy, and manage third-party software, SaaS,
-  containers, machine images (AMIs), data products, and professional services
-  that run on AWS. The AWS Marketplace Catalog API enables approved sellers
-  to programmatically manage their products, change sets, and entities, while
-  buyers can integrate procurement workflows with AWS billing.
+  AWS Marketplace is a curated digital catalog from Amazon Web Services that lets customers find, buy,
+  deploy, and manage third-party software, SaaS, containers, machine images (AMIs), data products, and
+  professional services that run on AWS. It is an AWS product, not a separate API provider: its APIs
+  (Marketplace Catalog, Metering Service, Entitlement Service, Commerce Analytics, Agreement and
+  Deployment) are profiled in the amazon-web-services repository, which is canonical. Consolidated
+  2026-10-13, approved by Kin Lane.
+
 type: Index
-deliveryModel:
-  model: saas
-  open_source: false
-  commercial: true
-  callable_host: true
-  label: Hosted service · you call their endpoint
-  confidence: high
-  source:
-  - openapi
-  - pricing
-  generated: '2026-08-28'
-  method: derived
-accessModel:
-  pricing: unknown
-  onboarding: unknown
-  trial: false
-  try_now: false
-  public: false
-  label: Unknown
-  confidence: low
-  source:
-  - authentication
-  - security
-  generated: '2026-09-03'
-  method: derived
+
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/aws-marketplace.png
+
 tags:
   - AWS
   - Cloud Marketplace
   - Procurement
-  - Software-as-a-Service
   - Software Distribution
-  - Catalog
-tags_raw:
-  - AWS
-  - Cloud Marketplace
-  - Procurement
-  - SaaS
-  - Software Distribution
-  - Catalog
+
 url: https://raw.githubusercontent.com/api-evangelist/aws-marketplace/refs/heads/main/apis.yml
+
 created: '2026-05-11'
-modified: '2026-05-11'
+
+modified: '2026-10-13'
+
 specificationVersion: '0.23'
-apis:
-- aid: aws-marketplace:catalog-api
-  name: AWS Marketplace Catalog API
-  description: >-
-    REST API for AWS Marketplace sellers to programmatically view and update their product entities and
-    change sets in the marketplace catalog.
-  humanURL: https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html
-  baseURL: https://catalog.marketplace.us-east-1.amazonaws.com
-  tags:
-  - Catalog
-  - Entities
-  - Changesets
-  - Seller Products
-  tags_raw:
-  - Catalog
-  - Entities
-  - Change Sets
-  - Seller Products
-  properties:
-  - type: Documentation
-    url: https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html
-  - type: APIReference
-    url: https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_Operations.html
-  - type: CLI
-    url: >-
-      https://awscli.amazonaws.com/v2/documentation/api/latest/reference/marketplace-catalog/index.html
-- aid: aws-marketplace:metering-service
-  name: AWS Marketplace Metering Service API
-  description: >-
-    API used by AWS Marketplace sellers of SaaS and container products to report customer usage and entitlements
-    for billing.
-  humanURL: https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/Welcome.html
-  baseURL: https://metering.marketplace.us-east-1.amazonaws.com
-  tags:
-  - Metering
-  - Billing
-  - Usage
-  properties:
-  - type: Documentation
-    url: https://docs.aws.amazon.com/marketplacemetering/latest/APIReference/Welcome.html
-- aid: aws-marketplace:entitlement-service
-  name: AWS Marketplace Entitlement Service API
-  description: >-
-    API for AWS Marketplace sellers to determine the entitlement that a customer has to a paid AWS Marketplace
-    product.
-  humanURL: https://docs.aws.amazon.com/marketplaceentitlement/latest/APIReference/Welcome.html
-  baseURL: https://entitlement.marketplace.us-east-1.amazonaws.com
-  tags:
-  - Entitlements
-  - Software-as-a-Service
-  tags_raw:
-  - Entitlement
-  - SaaS
-  properties:
-  - type: Documentation
-    url: https://docs.aws.amazon.com/marketplaceentitlement/latest/APIReference/Welcome.html
-- aid: aws-marketplace:commerce-analytics-service
-  name: AWS Marketplace Commerce Analytics Service API
-  description: >-
-    API for AWS Marketplace sellers to request and retrieve reports about sales, customer subscriptions,
-    and disbursements.
-  humanURL: >-
-    https://docs.aws.amazon.com/marketplace/latest/APIReference/commerce-analytics-service.html
-  baseURL: https://marketplacecommerceanalytics.us-east-1.amazonaws.com
-  tags:
-  - Analytics
-  - Reports
-  - Sales
-  properties:
-  - type: Documentation
-    url: >-
-      https://docs.aws.amazon.com/marketplace/latest/APIReference/commerce-analytics-service.html
-- aid: aws-marketplace:aws-marketplace-entities-api
-  name: AWS Marketplace Entities API
-  description: The Entities API from AWS Marketplace — 3 operation(s) for entities.
-  humanURL: https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html
-  baseURL: https://catalog.marketplace.us-east-1.amazonaws.com
-  tags:
-  - Entities
-  properties:
-  - type: OpenAPI
-    url: openapi/aws-marketplace-entities-api-openapi.yml
-- aid: aws-marketplace:aws-marketplace-resource-policies-api
-  name: AWS Marketplace Resource Policies API
-  description: The Resource Policies API from AWS Marketplace — 3 operation(s) for resource policies.
-  humanURL: https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html
-  baseURL: https://catalog.marketplace.us-east-1.amazonaws.com
-  tags:
-  - Resource Policies
-  properties:
-  - type: OpenAPI
-    url: openapi/aws-marketplace-resource-policies-api-openapi.yml
-- aid: aws-marketplace:aws-marketplace-tags-api
-  name: AWS Marketplace Tags API
-  description: The Tags API from AWS Marketplace — 3 operation(s) for tags.
-  humanURL: https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html
-  baseURL: https://catalog.marketplace.us-east-1.amazonaws.com
-  tags:
-  - Tags
-  properties:
-  - type: OpenAPI
-    url: openapi/aws-marketplace-tags-api-openapi.yml
-- aid: aws-marketplace:aws-marketplace-changesets-api
-  name: AWS Marketplace Changesets API
-  description: The Changesets API from AWS Marketplace — 4 operation(s) for changesets.
-  humanURL: https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html
-  baseURL: https://catalog.marketplace.us-east-1.amazonaws.com
-  tags:
-  - Changesets
-  properties:
-  - type: OpenAPI
-    url: openapi/aws-marketplace-changesets-api-openapi.yml
-common:
-  - type: Pricing
-    url: https://aws.amazon.com/marketplace/pp/prodview-vtvxyzbzs3huy?ref_=showroomEPO
-  - type: Plans
-    url: plans/aws-marketplace-plans-pricing.yml
-  - type: CapabilityMap
-    url: capabilities/aws-marketplace-capability-edges.yml
-    name: AWS Marketplace Business Capability Map
-  - type: AgenticAccess
-    url: agentic-access/aws-marketplace-agentic-access.yml
-  - type: TrustCenter
-    url: security/aws-marketplace-trust-center.yml
-  - type: VulnerabilityDisclosure
-    url: security/aws-marketplace-vulnerability-disclosure.yml
-  - type: DomainSecurity
-    url: security/aws-marketplace-domain-security.yml
-  - type: Authentication
-    url: authentication/aws-marketplace-authentication.yml
-  - type: Website
-    url: https://aws.amazon.com/marketplace/
-  - type: Documentation
-    url: https://docs.aws.amazon.com/marketplace/
-  - type: APIReference
-    url: https://docs.aws.amazon.com/marketplace/latest/APIReference/welcome.html
-  - type: Buyer Guide
-    url: https://docs.aws.amazon.com/marketplace/latest/buyerguide/what-is-marketplace.html
-  - type: Seller Guide
-    url: https://docs.aws.amazon.com/marketplace/latest/userguide/what-is-marketplace.html
-  - type: GitHub Samples
-    url: https://github.com/aws-samples/aws-marketplace-api-samples
-  - type: Signup
-    url: https://aws.amazon.com/marketplace/management/signin
-  - url: https://aws.amazon.com/blogs/awsmarketplace/feed/
-    type: Blog
+
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+
+common:
+  - type: ParentCompany
+    url: https://aws.amazon.com/
+    name: Amazon Web Services (amazon-web-services)
+  - type: Documentation
+    url: https://docs.aws.amazon.com/marketplace/
+
+apis: []
+
 x-parent: amazon-web-services
+
 x-relationship: product
+
+x-consolidated-into: amazon-web-services
