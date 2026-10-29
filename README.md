@@ -1,4 +1,4 @@
-# AWS Marketplace (aws-marketplace)
+# AWS Marketplace
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,12 +64,25 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-AWS Marketplace is a curated digital catalog from Amazon Web Services that lets customers find, buy, deploy, and manage third-party software, SaaS, containers, machine images (AMIs), data products, and professional services that run on AWS.
+> **Retired — merged into [Amazon Web Services](https://apis.io/providers/amazon-web-services/).** The two records described the same company, and that one is canonical. Nothing in this repository is maintained any more.
 
-AWS Marketplace is an AWS product, not a separate API provider. Its APIs (Marketplace Catalog, Metering Service, Entitlement Service, Commerce Analytics, Agreement and Deployment) are profiled in [amazon-web-services](https://github.com/api-evangelist/amazon-web-services), which is canonical. This repository was consolidated into it on 2026-10-13 and is kept as a pointer profile with no APIs.
+**Why:** AWS Marketplace is an AWS product; amazon-web-services is canonical. The four Marketplace Catalog split specs (entities, changesets, tags, resource policies) duplicated operations amazon-web-services already publishes, and were removed; the doc-only Catalog, Metering, Entitlement and Commerce Analytics entries were moved into amazon-web-services (wired to its marketplace originals). Catalog split pages point at the moved AWS Marketplace Catalog API; artifacts map 1:1 to the AWS equivalents where one exists, otherwise to the provider page. aws-marketplace stays live as a pointer profile with no APIs. Approved by Kin Lane 2026-10-13.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/aws-marketplace/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/aws-marketplace/refs/heads/main/apis.yml)
+**Retired:** 2026-10-13
 
-## Parent
+## Where to go now
 
-- [Amazon Web Services](https://raw.githubusercontent.com/api-evangelist/amazon-web-services/refs/heads/main/apis.yml)
+The current profile, APIs, artifacts and rating for Amazon Web Services are on APIs.io at **[apis.io/providers/amazon-web-services/](https://apis.io/providers/amazon-web-services/)**.
+
+Pages that used to belong to this profile now live at:
+
+- [Amazon Web Services Agentic Access](https://apis.io/agentic-access/amazon-web-services/amazon-web-services-agentic-access/)
+- [Amazon Web Services Plans Pricing](https://apis.io/plans/amazon-web-services/amazon-web-services-plans-pricing/)
+- [Amazon Web Services Price Estimates](https://apis.io/plans/amazon-web-services/amazon-web-services-price-estimates/)
+- [Amazon Web Services Domain Security](https://apis.io/security/amazon-web-services/amazon-web-services-domain-security/)
+- [Amazon Web Services Trust Center](https://apis.io/security/amazon-web-services/amazon-web-services-trust-center/)
+- [Amazon Web Services Vulnerability Disclosure](https://apis.io/security/amazon-web-services/amazon-web-services-vulnerability-disclosure/)
+
+## Open an issue
+
+Issues about Amazon Web Services belong on the canonical profile: [open one on api-evangelist/amazon-web-services](https://github.com/api-evangelist/amazon-web-services/issues/new). If you think this merge was a mistake — these were really two companies — say so there or email [info@apievangelist.com](mailto:info@apievangelist.com).
